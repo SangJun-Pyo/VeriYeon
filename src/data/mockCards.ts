@@ -1,0 +1,132 @@
+import type { MatchCard } from '../types';
+
+export const dailyCards: MatchCard[] = [
+  {
+    id: 'card-001',
+    nickname: '서울의 봄',
+    ageRange: '30대 초반',
+    region: '서울 강남권',
+    image: '🌸',
+    compatibilityScore: 87,
+    compatibilityKeywords: ['가치관 일치', '취미 공유', '라이프스타일 유사'],
+    level1Badges: [
+      '본인확인 완료',
+      '실사 인증 완료',
+      '재직 상태 검증 완료',
+      '학사 이상 충족',
+      '결혼 가능 상태 충족',
+      '설정 소득 기준 충족',
+    ],
+    level2Info: [
+      '국내 4년제 졸업',
+      '금융 업계 재직',
+      '소득 5~7천 구간',
+      '서울권 거주',
+      '혼인상태 검증 완료',
+    ],
+    level3Info: [
+      '이지현',
+      'OO증권 리서치팀',
+      'OO대학교 경제학과',
+      '미혼 검증 완료',
+      '010-XXXX-1234',
+    ],
+  },
+  {
+    id: 'card-002',
+    nickname: '조용한 오후',
+    ageRange: '30대 중반',
+    region: '경기 분당권',
+    image: '🌿',
+    compatibilityScore: 82,
+    compatibilityKeywords: ['결혼관 일치', '안정 선호', '내향형 공감'],
+    level1Badges: [
+      '본인확인 완료',
+      '실사 인증 완료',
+      '재직 상태 검증 완료',
+      '학사 이상 충족',
+      '결혼 가능 상태 충족',
+    ],
+    level2Info: [
+      '국내 4년제 졸업',
+      '의료 업계 종사',
+      '소득 7천 이상 구간',
+      '경기권 거주',
+      '혼인상태 검증 완료',
+    ],
+    level3Info: [
+      '박수연',
+      'OO병원 내과',
+      'OO의과대학교 의학과',
+      '미혼 검증 완료',
+      '010-XXXX-5678',
+    ],
+  },
+];
+
+export const bonusCards: MatchCard[] = [
+  {
+    id: 'card-003',
+    nickname: '새벽 한강',
+    ageRange: '30대 초반',
+    region: '서울 마포권',
+    image: '🌙',
+    compatibilityScore: 79,
+    compatibilityKeywords: ['창의성 공명', '독립적 성향', 'MBTI 보완'],
+    level1Badges: [
+      '본인확인 완료',
+      '실사 인증 완료',
+      '재직 상태 검증 완료',
+      '학사 이상 충족',
+      '결혼 가능 상태 충족',
+      '설정 소득 기준 충족',
+    ],
+    level2Info: [
+      '국내 4년제 졸업',
+      'IT 업계 재직',
+      '소득 5~7천 구간',
+      '서울권 거주',
+      '혼인상태 검증 완료',
+    ],
+    level3Info: [
+      '최민서',
+      'OO스타트업 기획팀',
+      'OO대학교 디자인학과',
+      '미혼 검증 완료',
+      '010-XXXX-9012',
+    ],
+  },
+  {
+    id: 'card-004',
+    nickname: '가을 도서관',
+    ageRange: '30대 중반',
+    region: '서울 성동권',
+    image: '📚',
+    compatibilityScore: 91,
+    compatibilityKeywords: ['지적 호기심', '문화 감수성', '대화 깊이'],
+    level1Badges: [
+      '본인확인 완료',
+      '실사 인증 완료',
+      '재직 상태 검증 완료',
+      '석사 이상 충족',
+      '결혼 가능 상태 충족',
+      '설정 소득 기준 충족',
+    ],
+    level2Info: [
+      '국내 석사 졸업',
+      '교육/연구 업계',
+      '소득 5~7천 구간',
+      '서울권 거주',
+      '혼인상태 검증 완료',
+    ],
+    level3Info: [
+      '김하은',
+      'OO연구원 사회과학팀',
+      'OO대학교 대학원 사회학과',
+      '미혼 검증 완료',
+      '010-XXXX-3456',
+    ],
+  },
+];
+
+export const allMockCards = [...dailyCards, ...bonusCards];

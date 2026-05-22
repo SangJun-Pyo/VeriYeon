@@ -1,0 +1,58 @@
+import type { VerifiableCredential } from '../types';
+
+export const mockVCs: VerifiableCredential[] = [
+  {
+    id: 'vc-identity',
+    type: 'identity',
+    status: 'verified',
+    level1Label: '본인확인 완료',
+    level2Label: '내국인 성인',
+    level3Label: '홍길동 · 1990-01-01',
+    expiresInDays: 365,
+  },
+  {
+    id: 'vc-verified-face',
+    type: 'verified_face',
+    status: 'verified',
+    level1Label: '실사 인증 완료',
+    level2Label: '최근 1개월 이내 인증',
+    level3Label: 'Verified Face 2026-04-21',
+    expiresInDays: 30,
+  },
+  {
+    id: 'vc-education',
+    type: 'education',
+    status: 'verified',
+    level1Label: '학사 이상 충족',
+    level2Label: '국내 4년제 졸업',
+    level3Label: 'OO대학교 컴퓨터공학과',
+    expiresInDays: 730,
+  },
+  {
+    id: 'vc-employment',
+    type: 'employment',
+    status: 'verified',
+    level1Label: '재직 상태 검증 완료',
+    level2Label: 'IT 업계 재직',
+    level3Label: 'OO회사 개발팀',
+    expiresInDays: 90,
+  },
+  {
+    id: 'vc-income',
+    type: 'income',
+    status: 'verified',
+    level1Label: '설정 소득 기준 충족',
+    level2Label: '소득 5~7천만 원 구간',
+    level3Label: '연소득 6,500만 원',
+    expiresInDays: 180,
+  },
+  {
+    id: 'vc-marital',
+    type: 'marital',
+    status: 'verified',
+    level1Label: '결혼 가능 상태 충족',
+    level2Label: '혼인상태 검증 완료',
+    level3Label: '미혼 검증 완료 (법원 기준)',
+    expiresInDays: 365,
+  },
+];

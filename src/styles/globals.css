@@ -1,0 +1,166 @@
+/* Google Fonts - @import는 반드시 가장 먼저 선언해야 합니다 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* sajuyeon 브랜드 색상 - 전통 청자/오방색 */
+  --color-celadon-50: #f1f5f3;
+  --color-celadon-100: #dde8e2;
+  --color-celadon-200: #bcd0c7;
+  --color-celadon-300: #92b2a5;
+  --color-celadon-400: #6a9183;
+  --color-celadon-500: #4e7567;
+  --color-celadon-600: #3d5e52;
+  --color-celadon-700: #334c43;
+  --color-celadon-800: #2b3e37;
+  --color-celadon-900: #26352f;
+
+  /* 한지 배경색 */
+  --color-hanji-50: #fdfcf8;
+  --color-hanji-100: #faf7ee;
+  --color-hanji-200: #f4eede;
+  --color-hanji-300: #ece2c8;
+
+  --color-ink: #2b3e37;
+  --color-cinnabar: #c0563f;
+  --color-gold: #b8945f;
+
+  /* 폰트 */
+  --font-serif: "Nanum Myeongjo", "Noto Serif KR", serif;
+  --font-sans: "Pretendard Variable", "Pretendard", system-ui, sans-serif;
+
+  /* 그림자 */
+  --shadow-card: 0 4px 20px -4px rgba(43, 62, 55, 0.12);
+  --shadow-soft: 0 2px 12px -2px rgba(43, 62, 55, 0.08);
+
+  /* 애니메이션 */
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-celadon-900);
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  .bg-hanji-texture {
+    background-color: #fdfcf8;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(78, 117, 103, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(184, 148, 95, 0.04) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .phone-frame {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-hanji-50);
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .btn-primary {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-celadon-500);
+    padding: 1rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-hanji-50);
+    box-shadow: var(--shadow-soft);
+    transition: background-color 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:active {
+    background-color: var(--color-celadon-600);
+  }
+  .btn-primary:disabled {
+    cursor: not-allowed;
+  }
+
+  .btn-ghost {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid var(--color-celadon-300);
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-celadon-600);
+    transition: background-color 0.15s;
+    cursor: pointer;
+  }
+  .btn-ghost:active {
+    background-color: var(--color-celadon-50);
+  }
+
+  .card {
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-hanji-200);
+    background-color: white;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid var(--color-hanji-200);
+    background-color: var(--color-hanji-50);
+    padding: 0.875rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  .field::placeholder {
+    color: var(--color-celadon-300);
+  }
+  .field:focus {
+    border-color: var(--color-celadon-400);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-celadon-100);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
